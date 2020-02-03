@@ -651,8 +651,8 @@ void TheThingsNetwork::configureEU868()
 void TheThingsNetwork::configureUS915(uint8_t fsb)
 {
   uint8_t ch;
-  uint8_t chLow = fsb > 0 ? (fsb - 1) * 8 : 0;
-  uint8_t chHigh = fsb > 0 ? chLow + 7 : 71;
+  uint8_t chLow = 8;//fsb > 0 ? (fsb - 1) * 8 : 0;
+  uint8_t chHigh = 8;//fsb > 0 ? chLow + 7 : 71;
   uint8_t ch500 = fsb + 63;
   for (ch = 0; ch < 72; ch++)
   {
